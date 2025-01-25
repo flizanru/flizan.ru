@@ -1,5 +1,7 @@
 # Nuxt 3 Minimal Starter
 
+Site: https://flizan.ru
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
