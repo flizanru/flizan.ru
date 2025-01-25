@@ -1,0 +1,69 @@
+{
+    "frontend": [
+      {
+        "name": "Nuxt 3",
+        "icon": "https://nuxt.com/icon.png",
+        "level": "6 месяцев",
+        "brief": "Современный Vue.js Фреймворк",
+        "description": "Эксперт в создании SSR приложений с Nuxt 3, использующий его мощные функции для оптимальной производительности и SEO."
+      },
+      {
+        "name": "Vue",
+        "icon": "https://vuejs.org/images/logo.png",
+        "level": "1 год",
+        "brief": "Прогрессивный JavaScript Фреймворк",
+        "description": "Обширный опыт работы с экосистемой Vue.js, создание реактивных и поддерживаемых пользовательских интерфейсов."
+      },
+      {
+        "name": "ReactJS",
+        "icon": "https://reactjs.org/favicon.ico",
+        "level": "3 года",
+        "brief": "JavaScript Библиотека для UI",
+        "description": "Опытный пользователь экосистемы React, включая хуки, контекст API и решения для управления состоянием."
+      }
+    ],
+    "backend": [
+      {
+        "name": "Lua",
+        "icon": "https://www.lua.org/favicon.ico",
+        "level": "5 лет",
+        "brief": "Встраиваемое Программирование",
+        "description": "Реализация пользовательских скриптовых решений и разработка игр на Lua."
+      },
+      {
+        "name": "PHP",
+        "icon": "https://www.php.net/favicon.ico",
+        "level": "3 года",
+        "brief": "Веб-разработка",
+        "description": "Создание надежных веб-приложений с использованием современных PHP фреймворков и лучших практик."
+      },
+      {
+        "name": "Python",
+        "icon": "https://www.python.org/static/favicon.ico",
+        "level": "2 года",
+        "brief": "Универсальное Программирование",
+        "description": "Разработка скриптов автоматизации, инструментов обработки данных и веб-приложений на Python."
+      },
+      {
+        "name": "Go",
+        "icon": "https://go.dev/favicon.ico",
+        "level": "1 год",
+        "brief": "Высокопроизводительный Backend",
+        "description": "Создание масштабируемых и эффективных микросервисов на Go, с фокусом на производительность и надежность."
+      },
+      {
+        "name": "NodeJS",
+        "icon": "https://node-js-org.vercel.app/static/logos/jsIconGreen.svg",
+        "level": "6 месяцев",
+        "brief": "JavaScript Runtime",
+        "description": "Создание масштабируемых серверных приложений и API с использованием Node.js и его экосистемы."
+      },
+      {
+        "name": "C#",
+        "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+        "level": "Начинаю изучение",
+        "brief": ".NET Разработка",
+        "description": "Разработка десктопных приложений на WPF, создание игр на Unity, реализация серверной логики с использованием ASP.NET Core."
+      }
+    ]
+  }
