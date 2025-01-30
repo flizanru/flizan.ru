@@ -96,16 +96,7 @@ const projects = [
     image: "http://flizan.ru/images/image2.png",
     demoUrl: "https://gambitrp.ru",
     // githubUrl: "https://github.com/example/ecommerce"
-  },
-   {
-     id: 3,
-     title: "Амням",
-     language: "Амням",
-     description: "Мне просто для красоты захотелось добавить третью стопку и я добавил сюда амняма",
-     image: "https://pic.rutubelist.ru/video/46/6d/466d15d2f16f6e59150edcd44f5d88a3.jpg",
-     demoUrl: "https://www.youtube.com/watch?v=sNLVxifWp_4",
-     githubUrl: "https://www.youtube.com/watch?v=sNLVxifWp_4"
-   }
+  }
 ]
 
 const getLanguageClass = (language) => {
