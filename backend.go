@@ -3,9 +3,10 @@ package main
 import (
 	"net"
 	"net/http"
-	"time"
 	"log"
+	"time"
 	"encoding/json"
+	"sync"
 )
 
 type ServerStatus struct {
@@ -13,6 +14,14 @@ type ServerStatus struct {
 	Status string  `json:"status"`
 	Ping   float64 `json:"ping"` 
 }
+
+var serverStatuses = []ServerStatus{
+	{IP: "46.174.48.244", Status: "offline", Ping: 0},
+	{IP: "89.39.121.159", Status: "offline", Ping: 0},
+	{IP: "87.120.166.96", Status: "offline", Ping: 0},
+}
+
+var statusesMutex = sync.Mutex{}
 
 func pingServer(ip string) (string, float64) {
 	start := time.Now()
@@ -22,37 +31,39 @@ func pingServer(ip string) (string, float64) {
 	if err != nil {
 		return "offline", 0
 	}
-	return "online", duration.Seconds() * 1000 
+	return "online", duration.Seconds() * 1000
+}
+
+func updateServerStatuses() {
+	for {
+		statusesMutex.Lock()
+		for i := range serverStatuses {
+			status, ping := pingServer(serverStatuses[i].IP)
+			serverStatuses[i].Status = status
+			serverStatuses[i].Ping = ping
+		}
+		statusesMutex.Unlock()
+
+		time.Sleep(1 * time.Minute)
+	}
 }
 
 func serverStatusHandler(w http.ResponseWriter, r *http.Request) {
-	servers := []string{
-		"46.174.48.244", 
-		"89.39.121.159",
-		"87.120.166.96",  
-	}
-
-	var statuses []ServerStatus
-
-	for _, ip := range servers {
-		status, ping := pingServer(ip)
-		statuses = append(statuses, ServerStatus{
-			IP:     ip,
-			Status: status,
-			Ping:   ping,
-		})
-	}
+	statusesMutex.Lock()
+	defer statusesMutex.Unlock()
 
 	w.Header().Set("Content-Type", "application/json")
-
-	err := json.NewEncoder(w).Encode(statuses)
+	err := json.NewEncoder(w).Encode(serverStatuses)
 	if err != nil {
 		http.Error(w, "Error encoding JSON response", http.StatusInternalServerError)
 	}
 }
 
 func main() {
+	go updateServerStatuses()
+
 	http.HandleFunc("/status", serverStatusHandler)
+
 	log.Println("Server started on port 2008...")
 	err := http.ListenAndServe(":2008", nil)
 	if err != nil {
