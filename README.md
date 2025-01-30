@@ -1,3 +1,9 @@
+![image](https://github.com/user-attachments/assets/ba28e763-18b8-46aa-ae8e-1481e0ba4ce6)![image](https://github.com/user-attachments/assets/f13316fd-daf1-4f02-972a-2b3f10badc86)
+![image](https://github.com/user-attachments/assets/f48afcab-c929-4e7a-9b69-8412e3649da1)
+![image](https://github.com/user-attachments/assets/c57a360e-eae1-4f3e-9f3b-7794285d5bf6)
+![image](https://github.com/user-attachments/assets/dfa78957-0f36-4d94-bf07-e205a7394f27)
+
+
 # Nuxt 3 Minimal Starter
 
 Site: https://flizan.ru
