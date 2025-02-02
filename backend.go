@@ -17,6 +17,7 @@ type ServerStatus struct {
 
 var serverStatuses = []ServerStatus{
 	{IP: "46.174.48.244", Status: "offline", Ping: 0},
+	{IP: "46.174.49.153", Status: "offline", Ping: 0},
 	{IP: "89.39.121.159", Status: "offline", Ping: 0},
 	{IP: "87.120.166.96", Status: "offline", Ping: 0},
 }

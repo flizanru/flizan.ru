@@ -132,6 +132,14 @@
         country: 'Россия'
       }
     },
+    '46.174.49.153': {
+      name: 'MSK-2',
+      location: {
+        name: 'Москва',
+        flag: 'flag:ru-4x3',
+        country: 'Россия'
+      }
+    },
     '89.39.121.159': {
       name: 'GER-1',
       location: {
