@@ -15,6 +15,13 @@
         </p>
         <div class="flex items-center justify-center gap-4 flex-wrap">
           <NuxtLink 
+            to="/services" 
+            class="nav-button group inline-flex items-center gap-2 px-8 py-3 bg-gray-900/50 backdrop-blur-sm rounded-xl font-medium text-gray-300 hover:text-white transition-all duration-300"
+          >
+            Услуги
+            <Icon name="mdi:application-cog" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </NuxtLink>
+          <NuxtLink 
             to="/skills" 
             class="nav-button group inline-flex items-center gap-2 px-8 py-3 bg-gray-900/50 backdrop-blur-sm rounded-xl font-medium text-gray-300 hover:text-white transition-all duration-300"
           >
@@ -28,13 +35,13 @@
             Проекты
             <Icon name="mdi:code-braces" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </NuxtLink>
-          <NuxtLink 
+          <!-- <NuxtLink 
             to="/servers" 
             class="nav-button group inline-flex items-center gap-2 px-8 py-3 bg-gray-900/50 backdrop-blur-sm rounded-xl font-medium text-gray-300 hover:text-white transition-all duration-300"
           >
             Сервера
             <Icon name="mdi:server" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </NuxtLink>
+          </NuxtLink> -->
           <a 
             href="https://t.me/flizan_s" 
             target="_blank" 
